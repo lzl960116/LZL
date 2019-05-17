@@ -1,0 +1,896 @@
+h1, h2, h3, h4, h5, h6, hr, select, div, p, ol, ul, li, body, textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #89919a;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+
+    text-decoration: none;
+}
+
+.wenzi li a {
+    color: black;
+    text-decoration: none;
+    margin-right: 25px;
+    line-height: 40px;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    background: #1C2327;
+}
+
+/*header整体*/
+.header-box {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    background: #1C2327;
+}
+
+.logo {
+    width: 160px;
+    height: 60px;
+    background: #1C2327;
+    float: left;
+    margin-right: 30px;
+}
+
+.logo a {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 60px;
+}
+
+.choose {
+    width: 900px;
+    height: 60px;
+    float: left;
+}
+
+nav {
+    width: 900px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.choose ul li a {
+    float: left;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 宋体;
+    font-size: 15px;
+}
+
+.menu {
+    position: relative;
+}
+.menu ul {
+    overflow: hidden;
+    position: absolute;
+    left: 200px;
+    top: 40px;
+    background: #1C2327;
+    z-index: 9;
+    display: none;
+
+}
+.menu ul li .sub{
+    float: left;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 15px;
+    padding: 0 5px;
+    height: 40px;
+
+}
+
+.choose ul .menu:hover .sub{
+    display: block;
+}
+
+.menu:before{
+    position: absolute;
+    content: "";
+    top: 27px;
+    right: 605px;
+    background: url("../blog-picture/jt.png") no-repeat;
+    width: 8px;
+    height: 8px;
+    transition: all 0.3s ease;
+}
+.choose ul .menu:hover:before{
+    transform: rotateZ(180deg);
+}
+.choose a:hover {
+    color: aqua;
+}
+
+.search {
+    width: 60px;
+    height: 60px;
+    float: right;
+    cursor: pointer;
+    background: url(../blog-picture/bg.png) no-repeat center !important;
+}
+
+/*head*/
+
+.content {
+    width: 1200px;
+    height: 2650px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.gywbox {
+    width: 790px;
+    height: 140px;
+    margin: 0px auto 20px ;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    float: left;
+}
+
+.gywbox .adbox {
+    width: 100%;
+    height: 105px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.gywbox .adbox img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    position: relative;
+    margin-right: 10px;
+    float: left;
+}
+.gywbox .adbox h3 {
+    width: 500px;
+    margin: 10px 0 10px;
+
+}
+.gywbox .adbox p{
+    color: #89919a;
+    margin-bottom: 5px;
+
+}
+
+.bowen {
+    width: 830px;
+    height: auto;
+    background: white;
+    border-radius: 5px;
+    float: left;
+    padding: 20px;
+}
+
+.bowen .bwtop {
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.bwtop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+.bwtop li:hover:before {
+    width:90px;
+}
+.bowen li .bwtp {
+    float: left;
+    width: 185px;
+    height: 87px;
+    position: relative;
+    overflow: hidden;
+    z-index: 9;
+}
+
+.bowen li .bwtmz {
+    width: 80px;
+    position: relative;
+    z-index: 9;
+}
+
+.bowen li .bwtp p {
+    height: 25px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    background-color: rgba(4, 140, 243, 0.4);
+    font-size: 15px;
+}
+.btm  li{
+    display: block;
+    height: 190px;
+    transition: all 0.3s;
+    background: white;
+}
+.bowen .bwnr .btm {
+    border-bottom: 1px solid #e4e3e3;
+    display: block;
+    height: 190px;
+    transition: all 0.3s;
+    background: white;
+}
+
+.bowen .bwnr li a img {
+    position: absolute;
+    width: 185px;
+    height: 87px;
+    float: left;
+    transition: all 0.3s;
+    z-index: 4;
+}
+
+.bowen .bwnr li a img:hover {
+    transform: scale(1.1);
+}
+
+.bowen .bwnr li .bwwz {
+    width: 600px;
+    height: 87px;
+    float: right;
+    color: #89919a;
+    background: white;
+}
+
+.bowen .bwnr li a .ydgd {
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: green;
+    line-height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    right: 0;
+    float: right;
+
+}
+
+.bowen .bwnr li h2 {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.bowen .bwnr li h2:hover {
+    color: green;
+}
+
+.bowen .bwdb {
+    margin: 10px 10px;
+    width: 250px;
+    height: 30px;
+    float: left;
+}
+
+.bowen .bwdb img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    float: left;
+}
+
+.bowen .bwdb ul {
+    display: block;
+    height: 30px;
+    float: left;
+}
+
+.bowen .bwdb ul li {
+    margin: 5px;
+    height: 30px;
+    float: left;
+}
+
+.paihang {
+    width: 270px;
+    height: auto;
+    background: white;
+    float: right;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-bottom: 20px;
+
+}
+
+.phtop {
+    width: 270px;
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    margin: 0 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phtop li {
+    float: left;
+}
+
+.phtop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+.phtop li:hover:before {
+    width:90px;
+}
+.phimg {
+    width: 270px;
+    height: 120px;
+    margin-top: 20px;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.phwz {
+    width: 270px;
+    height: 120px;
+    background: #a9a9a9;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    position: relative;
+    z-index: 9;
+    transition: all 0.5s;
+}
+
+.phwz p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 120px;
+    color: white;
+}
+
+.phimg a:hover .phwz {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.phimg img {
+    cursor: pointer;
+    transition: all 0.4s;
+    position: absolute;
+    z-index: 2;
+}
+
+.phimg a:hover img {
+    transform: scale(1.1);
+}
+
+.paihang .phwenzi {
+    width: 270px;
+    height: auto;
+    padding: 20px 0;
+    margin-top: 150px;
+}
+
+.paihang .phwenzi li {
+    width: 100%;
+    overflow: hidden;
+    line-height: 32px;
+    margin-top: 10px;
+    background: #e4e3e3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.phnr li i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin: 6px 10px 6px 6px;
+    position: relative;
+    font-style: normal;
+}
+
+.phnr li i:before {
+    position: absolute;
+    left: 7px;
+    top: -5px;
+    font-size: 9px;
+    color: #ffffff;
+    width: 20px;
+
+}
+
+.phnr li:first-child i {
+    background: orange;
+}
+
+.phnr li:first-child i::before {
+    content: "1";
+}
+
+.phnr li:nth-child(2) i {
+    background: orange;
+}
+
+.phnr li:nth-child(2) i::before {
+    content: "2";
+}
+
+.phnr li:nth-child(3) i {
+    background: orange;
+}
+
+.phnr li:nth-child(3) i::before {
+    content: "3";
+}
+
+.phnr li:nth-child(4) i {
+    background: #222222;
+}
+
+.phnr li:nth-child(4) i::before {
+    content: "4";
+}
+
+.phnr li:nth-child(5) i {
+    background: #222222;
+}
+
+.phnr li:nth-child(5) i::before {
+    content: "5";
+}
+
+.phnr li:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.zhanzhang {
+    width: 270px;
+    height: auto;
+    background: white;
+    float: right;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 217px;
+    position: relative;
+}
+
+.zztop {
+    width: 270px;
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    margin: 0 0 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.zztop li {
+    float: left;
+}
+
+.zztop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+.zztop li:hover:before {
+    width:90px;
+}
+.zzimg {
+    position: relative;
+    height: 120px;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 270px;
+    border-radius: 5px;
+}
+
+.zzimg img {
+    cursor: pointer;
+    transition: all 0.4s;
+    position: absolute;
+    z-index: 2;
+}
+
+.zzimg a:hover img {
+    transform: scale(1.1);
+}
+
+.zzwz {
+    height: 120px;
+    border-radius: 5px;
+    position: relative;
+    background: #a9a9a9;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 9;
+    width: 270px;
+    transition: all 0.5s;
+}
+
+.zzwz p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 120px;
+    color: white;
+}
+
+.zzimg a:hover .zzwz {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.zhanzhang .zznrbox {
+    width: 270px;
+    height: 100px;
+    margin-top: 20px ;
+    padding: 20px 0;
+}
+
+.zznrbox .zznr li {
+    width: 100%;
+    height: 87px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.zznrbox .zznr img {
+    width: 87px;
+    height: 87px;
+    float: left;
+}
+
+.zznr li a {
+    color: black;
+}
+
+.zznr li p {
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 163px;
+    height: 67px;
+    display: block;
+    float: right;
+}
+.zznr li:hover{
+    background-color: rgba(0,0,0,0.3);
+}
+
+.gengxin{
+    width: 270px;
+    height: 230px;
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    float: right;
+    margin-top: 20px;
+}
+
+.gxtop {
+    width: 270px;
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    overflow: hidden;
+    margin-bottom: 25px;
+    position: relative;
+}
+.gxtop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+.gxtop li:hover:before {
+    width:90px;
+}
+.gengxin .gxcontent a{
+    display: block;
+    padding:5px 10px;
+    color: white;
+    margin-right: 20px;
+}
+.gengxin .gxcontent a:first-child{
+    background: red;
+    border-radius: 5px;
+    float: left;
+}
+.gengxin .gxcontent a:nth-child(2){
+    background: aqua;
+    border-radius: 5px;
+    float: left;
+}
+.gengxin .gxcontent a:nth-child(3){
+    background: orange;
+    border-radius: 5px;
+    float: left;
+}
+.gengxin .gxcontent a:nth-child(4){
+    margin-top: 10px;
+    background: black;
+    border-radius: 5px;
+    float: left;
+}
+.gengxin .gxcontent a:nth-child(5){
+    margin-top: 10px;
+    background: blue;
+    border-radius: 5px;
+    float: left;
+}
+.gengxin .gxcontent a:nth-child(6){
+    margin-top: 10px;
+    background: green;
+    border-radius: 5px;
+    float: left;
+}
+.jinxihexi3 {
+    width: 270px;
+    height: 230px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    float: right;
+}
+
+.cainixihuan {
+    width: 270px;
+    height: auto;
+    background: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    float: right;
+    padding: 20px;
+}
+
+.cainixihuan .cntop {
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    border-radius: 5px;
+    position: relative;
+}
+
+.cnnr li {
+    display: block;
+    height: auto;
+    padding: 4px 12px 4px 30px;
+    line-height: 35px;
+    position: relative;
+}
+.cntop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+.cntop li:hover:before {
+    width:90px;
+}
+.cnnr li a {
+    font-size: 15px;
+    color: black;
+}
+
+.cnnr li a:before {
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 3px;
+    background: black;
+    border-radius: 10px;
+    left: 15px;
+    top: 20px;
+}
+
+.cnnr li a:hover {
+    color: #009966;
+}
+
+.jinxihexi2 {
+    width: 270px;
+    height: 230px;
+    background: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    position: absolute;
+    right: 0;
+    top: 1858px;
+}
+
+.zhandian {
+    width: 270px;
+    height: 400px;
+    background: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    right: 0;
+    top: 2148px;
+}
+
+.zhandian .zdtop {
+    width: 270px;
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    margin: 0 0 20px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.zhandian ul {
+    display: block;
+    width: 100%;
+    height: 170px;
+    background: white;
+    font-size: 15px;
+    border-radius: 5px;
+
+}
+
+.zhandian ul li {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.zdtop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 20px;
+    bottom: 380px;
+    transition: all 0.3s ease;
+}
+.zdtop li:hover:before {
+    width:90px;
+}
+.zhandian .zdnr a {
+    color: #009966;
+}
+
+.zdnr li a:hover {
+    text-decoration: underline;
+    color: #000;
+
+}
+
+.zhandian .wxgzh {
+    width: 170px;
+    height: 170px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    background: #464646;
+    border-top: 10px solid aqua;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #73777a;
+}
+
+.shengming {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    padding-left: 150px;
+}
+
+.wxbox {
+    width: 300px;
+    height: 180px;
+    float: left;
+
+}
+
+.wxbox img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.wxbox a {
+    width: 100px;
+    height: 100px;
+}
+
+.wxbox span {
+    margin-left: -95px;
+    margin-right: 50px;
+}
+
+.ftcontent {
+    width: auto;
+    height: 180px;
+    float: left;
+    font-size: 14px;
+}
+
+.ftcontent a {
+    color: black;
+}
+
+.ftcontent a:hover {
+    color: blue;
+}
+
+.top {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: url("../blog-picture/top.png") no-repeat center #000000;
+    right: 20px;
+    bottom: 10%;
+    position: fixed;
+}

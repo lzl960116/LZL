@@ -1,0 +1,315 @@
+h1, h2, h3, h4, h5, h6, hr, select, div, p, ol, ul, li, body, textarea {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #89919a;
+}
+p{
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+
+    text-decoration: none;
+}
+.wenzi li a{
+    color: black;
+    text-decoration: none;
+    margin-right: 25px;
+    line-height: 40px;
+}
+.header {
+    width: 100%;
+    height: 60px;
+    background: #1C2327;
+}
+
+/*header整体*/
+.header-box {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    background: #1C2327;
+}
+
+.logo {
+    width: 160px;
+    height: 60px;
+    background: #1C2327;
+    float: left;
+    margin-right: 30px;
+}
+
+.logo a {
+    color: #ffffff;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    line-height: 60px;
+}
+
+.choose {
+    width: 900px;
+    height: 60px;
+    float: left;
+}
+
+nav {
+    width: 900px;
+    height: 50px;
+    line-height: 60px;
+    text-align: center;
+}
+
+.choose ul li a {
+    float: left;
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: 宋体;
+    font-size: 15px;
+}
+
+.menu {
+    position: relative;
+}
+.menu ul {
+    overflow: hidden;
+    position: absolute;
+    left: 200px;
+    top: 40px;
+    background: #1C2327;
+    z-index: 9;
+    display: none;
+
+}
+.menu ul li .sub{
+    float: left;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 15px;
+    padding: 0 5px;
+    height: 40px;
+
+}
+
+.choose ul .menu:hover .sub{
+    display: block;
+}
+.menu:before{
+    position: absolute;
+    content: "";
+    top: 27px;
+    right: 605px;
+    background: url("../blog-picture/jt.png") no-repeat;
+    width: 8px;
+    height: 8px;
+    transition: all 0.3s ease;
+}
+.choose ul .menu:hover:before{
+    transform: rotateZ(180deg);
+}
+.choose a:hover {
+    color: aqua;
+}
+
+.search {
+    width: 60px;
+    height: 60px;
+    float: right;
+    cursor: pointer;
+    background: url(../blog-picture/bg.png) no-repeat center !important;
+}
+/*head*/
+
+.other {
+    width: 1200px;
+    height: 800px;
+    margin: 20px auto;
+
+}
+
+.liuyan {
+    width: auto;
+    height: auto;
+    min-height: 600px;
+    background: white;
+    float: left;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.lytop {
+    width: 1160px;
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.lytop li {
+    float: right;
+    overflow: hidden;
+}
+
+.lytop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.lytop li:hover:before {
+    width: 90px;
+}
+
+.other .lybox{
+    width: 1140px;
+    height: auto;
+    min-height: 400px;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+}
+.other p{
+    margin: 0 0  10px 0;
+    display: block;
+}
+.other img{
+    border: 0;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.lybox p{
+    overflow: hidden;
+}
+textarea#lytext{
+    width: 99%;
+}
+.lybox input[type="submit"] {
+    display: block;
+    background: #040404;
+    color: #ffffff;
+    border: 0;
+    line-height: 30px;
+    padding: 0 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+.fb ul {
+    height: 60px;
+    display: block;
+    margin: 10px 0;
+    padding: 20px 10px ;
+    border-bottom: #ececec 1px solid;
+}
+span.tximg{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.fbtime span{
+    float: right;
+    color: #999999;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.hf{
+    padding-bottom: 20px;
+    border-bottom: #dedddd 1px dashed;
+}
+.hf ul{
+    padding: 10px;
+    background: #f9f9f9;
+    display: block;
+}
+
+footer {
+    width: 100%;
+    height: 180px;
+    background: #464646;
+    border-top: 10px solid aqua;
+    padding: 30px 0;
+}
+
+footer a {
+    color: #73777a;
+}
+
+.shengming {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    padding-left: 150px;
+}
+
+.wxbox {
+    width: 300px;
+    height: 180px;
+    float: left;
+
+}
+
+.wxbox img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.wxbox a {
+    width: 100px;
+    height: 100px;
+}
+
+.wxbox span {
+    margin-left: -95px;
+    margin-right: 50px;
+}
+
+.ftcontent {
+    width: auto;
+    height: 180px;
+    float: left;
+    font-size: 14px;
+}
+
+.ftcontent a {
+    color: black;
+}
+
+.ftcontent a:hover {
+    color: blue;
+}
+
+/*footer*/
+.top {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background: url("../blog-picture/top.png") no-repeat center #000000;
+    right: 20px;
+    bottom: 10%;
+    position: fixed;
+}
+
+
