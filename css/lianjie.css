@@ -289,13 +289,14 @@ nav {
 .textbox p {
     margin: 15px 0;
 }
+
 .diggit {
     display: block;
     width: 160px;
     margin: 20px auto;
     background: #e2523a;
     color: #ffffff;
-    box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.2);
+    box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     line-height: 40px;
     text-align: center;
@@ -312,20 +313,22 @@ nav {
 .txt a:hover {
     text-decoration: underline;
 }
-.nextinfo a{
+
+.nextinfo a {
     color: black;
 }
 
-.nextinfo a:hover{
+.nextinfo a:hover {
     text-decoration: underline;
 }
 
-.bottomimg{
+.bottomimg {
     width: 830px;
     height: 310px;
 
 }
-.bottomimg img{
+
+.bottomimg img {
     border-radius: 5px;
 }
 
@@ -925,4 +928,111 @@ footer a {
     right: 20px;
     bottom: 10%;
     position: fixed;
+}
+
+/*。。。*/
+.liuyan {
+    width: 830px;
+    height: 1000px;
+    background: white;
+    border-radius: 5px;
+    float: left;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.lytop {
+    width: 830px;
+    height: 40px;
+    background: white;
+    border-bottom: 1px solid #e4e3e3;
+    margin-bottom: 10px;
+    position: relative;
+}
+.lytop li {
+    float: right;
+    overflow: hidden;
+}
+
+.lytop li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.lytop li:hover:before {
+    width: 90px;
+}
+
+.liuyan .lybox{
+    width: 830px;
+    height: auto;
+    min-height: 400px;
+    overflow: hidden;
+    background: white;
+    padding: 10px;
+}
+.liuyan p{
+    margin: 0 0  10px 0;
+    display: block;
+}
+.liuyan img{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+.lybox p{
+    overflow: hidden;
+}
+textarea#lytext{
+    width: 99%;
+}
+.lybox input[type="submit"] {
+    display: block;
+    background: #040404;
+    color: #ffffff;
+    border: 0;
+    line-height: 30px;
+    padding: 0 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+.fb ul {
+    height: 60px;
+    display: block;
+    margin: 10px 0;
+    padding: 20px 10px ;
+    border-bottom: #ececec 1px solid;
+}
+span.tximg{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+
+.fbtime span{
+    float: right;
+    color: #999999;
+    font-size: 12px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.hf{
+    padding-bottom: 20px;
+    border-bottom: #dedddd 1px dashed;
+}
+.hf ul{
+    padding: 10px;
+    background: #f9f9f9;
+    display: block;
 }
