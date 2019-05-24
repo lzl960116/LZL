@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6, hr, select, div, p, ol, ul, li, body, textarea {
 }
 
 body {
-    background-color: #89919a;
+    background-color: #E9EAED;
 }
 
 p {
@@ -144,7 +144,7 @@ nav {
 .other {
     width: 1200px;
     height: 800px;
-    margin: 20px auto;
+    margin: 0 auto;
     background: white;
 }
 
