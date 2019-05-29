@@ -383,17 +383,13 @@ nav {
 
 .rztop li {
     float: left;
+
+    margin-right: 20px;
+    height: 39px;
 }
 
-.rztop li::before {
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100px;
-    height: 2px;
-    background-color: black;
-    left: 0;
-    bottom: 0;
+.rztop .cold {
+ border-bottom: 2px solid black;
 }
 
 .rzcontent {
@@ -563,13 +559,12 @@ nav {
 }
 
 
-.wznr li:hover {
+.wznr .hot{
     background-color: #e4e3e3;
 }
 
-.wznr li:hover p {
+.wznr .hot p {
     display: -webkit-box;
-    background-color: #e4e3e3;
 }
 
 /*.wznr .hot{*/
