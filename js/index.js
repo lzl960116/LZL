@@ -61,7 +61,7 @@ window.onload = function () {
     * */
     let gdt = document.getElementsByClassName("dongtu");
     let tx1 = setInterval(anniu[1].onclick, 2500);
-
+    console.log(tx1);
     gdt[0].onmouseover = function () {
         clearInterval(tx1)
     };
