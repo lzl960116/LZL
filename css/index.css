@@ -156,17 +156,20 @@ nav {
 
 .dongtu a img {
     position: absolute;
+    z-index: 1;
 }
-
-.dongtu .prev {
+.dongtu  a .lbt1{
+    z-index: 3;
+}
+.dongtu #prev {
     background: url("../blog-picture/left.png") no-repeat;
 }
 
-.dongtu .next {
+.dongtu #next {
     background: url("../blog-picture/right.png") no-repeat;
 }
 
-.dongtu .prev, .dongtu .next {
+.dongtu #prev, .dongtu #next {
     position: absolute;
     height: 32px;
     line-height: 32px;
@@ -179,21 +182,21 @@ nav {
     transition: all 200ms;
 }
 
-.dongtu:hover .prev {
+.dongtu:hover #prev {
     opacity: 0.7;
     left: 20px;
 }
 
-.dongtu:hover .next {
+.dongtu:hover #next {
     opacity: 0.7;
     right: 20px;
 }
 
-.dongtu .prev {
+.dongtu #prev {
     left: 30px;
 }
 
-.dongtu .next {
+.dongtu #next {
     right: 30px;
 }
 
