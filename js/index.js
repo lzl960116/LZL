@@ -1,31 +1,10 @@
 window.onload = function () {
-    /*
-    * 图片随点动
-    * */
-    let tp = document.getElementsByClassName("dt");
-    let lbt = tp[0].getElementsByTagName("img");
-    let li = document.getElementsByClassName("dian");
 
-        li[0].style.background = 'blue';
-    for (let i = 0; i < li.length; i++) {
-        li[i].onclick = function () {
-            for (let i = 0; i < li.length; i++) {
-                lbt[i].className = '';
-                li[i].style.background = 'white'
-            }
-            lbt[i].className = 'lbt1';
-            this.style.background = 'blue'
-        };
-        /*  li[i].onmouseleave = function () {  //移动时切换
-              lbt[i].className = '';
-              this.style.background = 'white'
-          };*/
-    }
 
     /*
     * 图片左右按钮
     * */
-    let index = 0;
+    var index = 0;
     let anniu = document.getElementsByClassName("page");
 
     anniu[1].onclick = function () {
@@ -54,10 +33,45 @@ window.onload = function () {
     };
 
     /*
-      * 图片和按钮按倒计时滚动
-      * */
-    setInterval(anniu[1].onclick,2000);
+    * 图片随点动
+    * */
+    let tp = document.getElementsByClassName("dt");
+    let lbt = tp[0].getElementsByTagName("img");
+    let li = document.getElementsByClassName("dian");
 
+    li[0].style.background = 'blue';
+    for (let i = 0; i < li.length; i++) {
+        li[i].onclick = function () {
+            for (let i = 0; i < li.length; i++) {
+                lbt[i].className = '';
+                li[i].style.background = 'white'
+
+            }
+            index = i;
+            lbt[i].className = 'lbt1';
+            this.style.background = 'blue'
+        };
+        /*  li[i].onmouseleave = function () {  //鼠标移动时切换
+              lbt[i].className = '';
+              this.style.background = 'white'
+          };*/
+    }
+    /*
+    * 鼠标移入滚动停止，移出滚动开始
+    * */
+    let gdt = document.getElementsByClassName("dongtu");
+    // gdt[0].onmouseout=function () {
+    //  tx1 =  setInterval(anniu[1].onclick,2500);
+    // };
+
+    let tx1 = setInterval(anniu[1].onclick, 2500);
+    gdt[0].onmouseover = function () {
+        console.log(123);
+        clearInterval(tx1)
+    };
+    gdt[0].onmouseout = function () {
+        setInterval(anniu[1].onclick, 2500);
+    };
     /*
     * 第一种方法
     * */
