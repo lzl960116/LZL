@@ -60,13 +60,9 @@ window.onload = function () {
     * 鼠标移入滚动停止，移出滚动开始
     * */
     let gdt = document.getElementsByClassName("dongtu");
-    // gdt[0].onmouseout=function () {
-    //  tx1 =  setInterval(anniu[1].onclick,2500);
-    // };
-
     let tx1 = setInterval(anniu[1].onclick, 2500);
+
     gdt[0].onmouseover = function () {
-        console.log(123);
         clearInterval(tx1)
     };
     gdt[0].onmouseout = function () {
