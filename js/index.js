@@ -66,7 +66,7 @@ window.onload = function () {
         clearInterval(tx1)
     };
     gdt[0].onmouseout = function () {
-        setInterval(anniu[1].onclick, 2500);
+      tx1 =  setInterval(anniu[1].onclick, 2500);
     };
     /*
     * 第一种方法
