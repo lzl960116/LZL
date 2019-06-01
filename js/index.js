@@ -1,26 +1,43 @@
 window.onload = function () {
-
-
     /*
     * 图片左右按钮
     * */
-    var index = 0;
+    let li = document.getElementsByClassName("dtlist");
+    let lo =li[0].getElementsByTagName("li");
+    console.log(lo);
+    let current = 0, next = 0;
+    /* var index = 0;*/
+    let tp = document.getElementsByClassName("dt");
+    console.log(tp);
+    let lbt = tp[0].getElementsByTagName("li");
     let anniu = document.getElementsByClassName("page");
-
+    let w = lbt[0].offsetWidth;
+    /* anniu[1].onclick = function () {
+         index++;
+         if (index === lbt.length) {
+             index = 0;
+         }
+         for (let i = 0; i < li.length; i++) {
+             lbt[i].className = "";
+             li[i].style.background = 'white'
+         }
+         lbt[index].className = "lbt1";
+         li[index].style.background = 'blue';
+         }*/
     anniu[1].onclick = function () {
-        index++;
-        if (index == lbt.length) {
-            index = 0;
+        next++;
+        if (next === lbt.length) {
+            next = 0;
         }
-        for (let i = 0; i < li.length; i++) {
-            lbt[i].className = "";
-            li[i].style.background = 'white'
-        }
-        lbt[index].className = "lbt1";
-        li[index].style.background = 'blue';
+        lbt[next].style.left = w + 'px';
+        lo[current].classList.remove ("dian");
+        lo[next].classList.add ("dian");
+        animate(lbt[current], {left: -w});
+        animate(lbt[next], {left: 0});
+        current = next;
     };
-    anniu[0].onclick = function () {
-        if (index == 0) {
+    /*anniu[0].onclick = function () {
+        if (index === 0) {
             index = lbt.length;
         }
         index--;
@@ -31,42 +48,78 @@ window.onload = function () {
         lbt[index].className = "lbt1";
         li[index].style.background = 'blue';
     };
+*/
+    anniu[0].onclick = function () {
+        next--;
+        if (next < 0) {
+            next = lbt.length - 1;
+        }
+        console.log(lbt[next]);
+        console.log(next);
+        lbt[next].style.left = -w + 'px';
+        lo[current].classList.remove ("dian");
+        lo[next].classList.add ("dian");
+        animate(lbt[current], {left: w});
+        animate(lbt[next], {left: 0});
+        current = next;
+    };
 
     /*
     * 图片随点动
     * */
-    let tp = document.getElementsByClassName("dt");
-    let lbt = tp[0].getElementsByTagName("img");
-    let li = document.getElementsByClassName("dian");
 
-    li[0].style.background = 'blue';
-    for (let i = 0; i < li.length; i++) {
-        li[i].onclick = function () {
-            for (let i = 0; i < li.length; i++) {
-                lbt[i].className = '';
-                li[i].style.background = 'white'
+for (let i=0;i<lo.length;i++) {
+    lo[i].onclick=function(){
+        if(next===i){
+            return;
+        }
+        next=i;
+        if(next>current){
+            lbt[next].style.left = w + 'px';
+            animate(lbt[current], {left: -w});
+            animate(lbt[next], {left: 0});
+        }else {
+            lbt[next].style.left = -w + 'px';
+            animate(lbt[current], {left: w});
+            animate(lbt[next], {left: 0});
+        }
 
-            }
-            index = i;
-            lbt[i].className = 'lbt1';
-            this.style.background = 'blue'
-        };
-        /*  li[i].onmouseleave = function () {  //鼠标移动时切换
-              lbt[i].className = '';
-              this.style.background = 'white'
-          };*/
+        lo[current].classList.remove ("dian");
+        lo[next].classList.add ("dian");
+
+        current = next;
     }
+
+}
+
+    /* li[0].style.background = 'blue';
+     for (let i = 0; i < li.length; i++) {
+         li[i].onclick = function () {
+             for (let i = 0; i < li.length; i++) {
+                 lbt[i].className = '';
+                 li[i].style.background = 'white'
+             }
+             current = i;
+             lbt[i].className = 'lbt1';
+             this.style.background = 'blue'
+         };
+     }*/
+    /*  li[i].onmouseleave = function () {  //鼠标移动时切换
+          lbt[i].className = '';
+          this.style.background = 'white'
+      };*/
+    /* }*/
     /*
     * 鼠标移入滚动停止，移出滚动开始
     * */
     let gdt = document.getElementsByClassName("dongtu");
     let tx1 = setInterval(anniu[1].onclick, 2500);
-    console.log(tx1);
+
     gdt[0].onmouseover = function () {
         clearInterval(tx1)
     };
     gdt[0].onmouseout = function () {
-      tx1 =  setInterval(anniu[1].onclick, 2500);
+        tx1 = setInterval(anniu[1].onclick, 2500);
     };
     /*
     * 第一种方法

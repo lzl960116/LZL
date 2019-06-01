@@ -152,15 +152,25 @@ nav {
     height: 320px;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 
-.dongtu a img {
+.dongtu .dt li{
     position: absolute;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
+    left: 550px;
+    top: 0;
 }
-.dongtu  a .lbt1{
+
+.dongtu .dt li:first-child{
+    left: 0;
+}
+
+/*.dongtu  a .lbt1{
     z-index: 3;
-}
+}*/
+
 .dongtu #prev {
     background: url("../blog-picture/left.png") no-repeat;
 }
@@ -222,6 +232,9 @@ nav {
 
 }
 
+.dongtu .dtlist .dian{
+    background: blue;
+}
 .jingtu {
     width: 310px;
     height: 320px;
