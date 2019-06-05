@@ -3,12 +3,10 @@ window.onload = function () {
     * 图片左右按钮
     * */
     let li = document.getElementsByClassName("dtlist");
-    let lo =li[0].getElementsByTagName("li");
-    console.log(lo);
+    let lo = li[0].getElementsByTagName("li");
     let current = 0, next = 0;
     /* var index = 0;*/
     let tp = document.getElementsByClassName("dt");
-    console.log(tp);
     let lbt = tp[0].getElementsByTagName("li");
     let anniu = document.getElementsByClassName("page");
     let w = lbt[0].offsetWidth;
@@ -30,8 +28,8 @@ window.onload = function () {
             next = 0;
         }
         lbt[next].style.left = w + 'px';
-        lo[current].classList.remove ("dian");
-        lo[next].classList.add ("dian");
+        lo[current].classList.remove("dian");
+        lo[next].classList.add("dian");
         animate(lbt[current], {left: -w});
         animate(lbt[next], {left: 0});
         current = next;
@@ -57,8 +55,8 @@ window.onload = function () {
         console.log(lbt[next]);
         console.log(next);
         lbt[next].style.left = -w + 'px';
-        lo[current].classList.remove ("dian");
-        lo[next].classList.add ("dian");
+        lo[current].classList.remove("dian");
+        lo[next].classList.add("dian");
         animate(lbt[current], {left: w});
         animate(lbt[next], {left: 0});
         current = next;
@@ -67,30 +65,29 @@ window.onload = function () {
     /*
     * 图片随点动
     * */
+    for (let i = 0; i < lo.length; i++) {
+        lo[i].onclick = function () {
+            if (next === i) {
+                return;
+            }
+            next = i;
+            if (next > current) {
+                lbt[next].style.left = w + 'px';
+                animate(lbt[current], {left: -w});
+                animate(lbt[next], {left: 0});
+            } else {
+                lbt[next].style.left = -w + 'px';
+                animate(lbt[current], {left: w});
+                animate(lbt[next], {left: 0});
+            }
 
-for (let i=0;i<lo.length;i++) {
-    lo[i].onclick=function(){
-        if(next===i){
-            return;
+            lo[current].classList.remove("dian");
+            lo[next].classList.add("dian");
+
+            current = next;
         }
-        next=i;
-        if(next>current){
-            lbt[next].style.left = w + 'px';
-            animate(lbt[current], {left: -w});
-            animate(lbt[next], {left: 0});
-        }else {
-            lbt[next].style.left = -w + 'px';
-            animate(lbt[current], {left: w});
-            animate(lbt[next], {left: 0});
-        }
 
-        lo[current].classList.remove ("dian");
-        lo[next].classList.add ("dian");
-
-        current = next;
     }
-
-}
 
     /* li[0].style.background = 'blue';
      for (let i = 0; i < li.length; i++) {
@@ -172,6 +169,24 @@ for (let i=0;i<lo.length;i++) {
             cow2[i].className = 'cold';
         };
     }
+    /*
+    * 按需加载图片
+    * */
+    let viewH = window.innerHeight;
+    console.log(viewH);
+    let dogs = document.querySelectorAll(".dog");
+    let alldog = [];
+    dogs.forEach(function (ele) {
+        let baba = ele.offsetParent;
+        alldog.push(baba.offsetTop + ele.offsetTop);
 
-
+    });
+    window.onscroll = function () {
+        let scrolltop = document.documentElement.scrollTop;
+        for (let i = 0; i < alldog.length; i++) {
+            if (scrolltop + viewH >= alldog[i] + 60) {
+                dogs[i].src = dogs[i].getAttribute('aa')
+            }
+        }
+    }
 };

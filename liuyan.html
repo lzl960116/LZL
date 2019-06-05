@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>留言</title>
     <link rel="stylesheet" href="./css/liuyan.css">
+    <script src="./js/liuyan.js"></script>
 </head>
 <body>
 
@@ -59,24 +60,24 @@
                 <p>
                     <i>
                         <input type="radio" value="../blog/blog-picture/tx1.jpg" id="2" name="mycall" style="display: none;">
-                        <img src="./blog-picture/tx1.jpg" alt="" onclick="myFun(this.id)" style="opacity: 1;">
+                        <img src="./blog-picture/tx1.jpg" alt="" id="a" class=""  style="opacity: 0.5;">
                     </i>
                     <i>
                         <input type="radio" value="../blog/blog-picture/tx2.jpg" id="3" name="mycall" style="display: none;">
-                        <img src="./blog-picture/tx2.jpg" alt="" onclick="myFun(this.id)" style="opacity: 0.8;">
+                        <img src="./blog-picture/tx2.jpg" alt=""  id="b" class=""  style="opacity: 0.5;">
                     </i>
                     <i>
                         <input type="radio" value="../blog/blog-picture/tx3.jpg" id="4" name="mycall" style="display: none;">
-                        <img src="./blog-picture/tx3.jpg" alt="" onclick="myFun(this.id)" style="opacity: 0.8;">
+                        <img src="./blog-picture/tx3.jpg" alt=""   id="c" class=""  style="opacity: 0.5;">
                     </i>
                 </p>
                 <p>
-                    <span class="tnr">留言内容：</span>
-                    <textarea name="lytext" id="lytext" cols="60" rows="12"></textarea>
+                    <span class="tnr">留言字数：&nbsp; &nbsp; &nbsp;剩余字数：300</span>
+                    <textarea name="lytext" id="lytext" cols="60" rows="12" maxlength="300" ></textarea>
                 </p>
                 <p>
+                    <input type="reset" name="enews"    value="重置">
                     <input type="submit" name="submit3" value="提交">
-                    <input type="hidden" name="enews" id="enews" value="AddGbook">
                 </p>
             </form>
 
@@ -84,9 +85,9 @@
         <div class="fb">
             <ul>
                 <span class="tximg">
-                    <img src="./blog-picture/tx1.jpg" alt="" style="opacity: 0.8;">
+                    <img src="./blog-picture/tx1.jpg" alt="" >
                 </span>
-                <p class="fbtime"><span>2019-5-14</span>李狗蛋</p>
+                <p class="fbtime"><span>2019-05-14</span>李狗蛋</p>
                 <p class="fbinfo">模板更新了可以给我用吗？</p>
             </ul>
         </div>

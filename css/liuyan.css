@@ -201,9 +201,21 @@ nav {
     overflow: hidden;
 }
 textarea#lytext{
+    resize: none;
     width: 99%;
 }
 .lybox input[type="submit"] {
+    display: block;
+    background: #040404;
+    color: #ffffff;
+    border: 0;
+    line-height: 30px;
+    padding: 0 20px;
+    border-radius: 5px;
+    float: right;
+    margin-right: 10px;
+}
+.lybox input[type="reset"] {
     display: block;
     background: #040404;
     color: #ffffff;
@@ -312,4 +324,7 @@ footer a {
     position: fixed;
 }
 
+.hot{
+    opacity: 1;
+}
 
